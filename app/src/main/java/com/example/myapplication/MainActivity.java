@@ -16,6 +16,10 @@ import com.kakao.usermgmt.UserManagement;
 import com.kakao.usermgmt.callback.LogoutResponseCallback;
 
 import java.security.MessageDigest;
+import java.util.Map;
+
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
+import static androidx.appcompat.widget.AppCompatDrawableManager.get;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,12 +29,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+
         //getHashKey(this);
     }
+}
+    /*// 프로젝트의 해시키를 반환
 
-    // 프로젝트의 해시키를 반환
-
-    /*@Nullable
+    @Nullable
     public static String getHashKey(Context context) {
         final String TAG = "KeyHash";
         String keyHash = null;
@@ -55,5 +60,5 @@ public class MainActivity extends AppCompatActivity {
             return null;
         }
     }*/
-}
+
 
