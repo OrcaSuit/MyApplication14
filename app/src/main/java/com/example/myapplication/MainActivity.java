@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +12,8 @@ import android.content.pm.Signature;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 
 import com.kakao.usermgmt.UserManagement;
 import com.kakao.usermgmt.callback.LogoutResponseCallback;
@@ -22,16 +25,19 @@ import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 import static androidx.appcompat.widget.AppCompatDrawableManager.get;
 
 public class MainActivity extends AppCompatActivity {
-
+    UserVO userinfo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
+        userinfo = ((GlobalApplication) getApplication()).getUserinfo();
 
 
         //getHashKey(this);
     }
+
+
 }
     /*// 프로젝트의 해시키를 반환
 

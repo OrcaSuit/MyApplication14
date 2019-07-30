@@ -16,16 +16,14 @@ public class GlobalApplication extends Application {
         return instance;
     }
 
-
     @Override
     public void onCreate() {
         super.onCreate();
         instance = this;
         // Kakao Sdk 초기화
         KakaoSDK.init(new KakaoSDKAdapter());
-        //?
-        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
-        StrictMode.setVmPolicy(builder.build());
+        //StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+        //StrictMode.setVmPolicy(builder.build());
     }
 
     @Override
@@ -42,6 +40,5 @@ public class GlobalApplication extends Application {
     public void setUserinfo(UserVO item) {
         this.userinfo = item;
     }
-
 
 }

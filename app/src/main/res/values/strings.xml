@@ -2,5 +2,8 @@
     <string name="app_name">My Application</string>
     <string name="kakao_app_key">f220fc70fbd3ae801a835efd006d378d</string>
 
+    <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+
+    <string name="usermgmg_phone" translatable="false">전화번호를 입력해주세요.</string>
 
 </resources>

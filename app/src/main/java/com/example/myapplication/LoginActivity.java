@@ -18,15 +18,17 @@ public class LoginActivity extends AppCompatActivity {
 
     private Context mContext;
     private Button btn_custom_login;
+    UserVO userinfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         mContext = getApplicationContext();
 
-        btn_custom_login = (Button) findViewById(R.id.btn_custom_login);
+        userinfo = ((GlobalApplication) getApplication()).getUserinfo();
 
+        btn_custom_login = (Button) findViewById(R.id.btn_custom_login);
         btn_custom_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
